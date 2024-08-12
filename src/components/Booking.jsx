@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/styles.css"; 
 
 function Booking() {
   const [formData, setFormData] = useState({
@@ -23,62 +24,23 @@ function Booking() {
   };
 
   return (
-    <div>
-      <h2>Book an Appointment</h2>
+    <div className="booking-form-container">
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="date">Date:</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="time">Time:</label>
-          <input
-            type="time"
-            id="time"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
+        <label htmlFor="name">Name:</label>
+        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+
+        <label htmlFor="email">Email:</label>
+        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+
+        <label htmlFor="date">Date:</label>
+        <input type="date" id="date" name="date" value={formData.date} onChange={handleChange} required />
+
+        <label htmlFor="time">Time:</label>
+        <input type="time" id="time" name="time" value={formData.time} onChange={handleChange} required />
+
+        <label htmlFor="message">Message:</label>
+        <textarea id="message" name="message" value={formData.message} onChange={handleChange} />
+
         <button type="submit">Book Appointment</button>
       </form>
     </div>

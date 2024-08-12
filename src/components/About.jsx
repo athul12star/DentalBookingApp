@@ -1,5 +1,8 @@
 import React from "react";
-import "./styles.css"; // Ensure your CSS file is correctly linked
+import "../styles/styles.css";
+// Import images from the assets folder
+import JoyelImage from "../assets/joyel-johny.jpg";
+import AgnusImage from "../assets/agnus-mable-cleetus.jpg";
 
 function About() {
   return (
@@ -52,20 +55,20 @@ function About() {
         <div className="team-list">
           <div className="team-member">
             <img
-              src="https://via.placeholder.com/150"
-              alt="Dr. John Doe"
+              src={JoyelImage}
+              alt="Dr. Joyel Johny"
               className="team-photo"
             />
-            <h4>Dr. John Doe</h4>
+            <h4>Dr. Joyel Johny</h4>
             <p>Chief Dentist</p>
           </div>
           <div className="team-member">
             <img
-              src="https://via.placeholder.com/150"
-              alt="Dr. Jane Smith"
+              src={AgnusImage}
+              alt="Dr. Agnus Mable Cleetus"
               className="team-photo"
             />
-            <h4>Dr. Jane Smith</h4>
+            <h4>Dr. Agnus Mable cleetus</h4>
             <p>Orthodontist</p>
           </div>
         </div>
@@ -78,7 +81,7 @@ function About() {
             "The team at DentalCare is amazing. I had a great experience with
             their professional and friendly staff."
           </p>
-          <h4>- Emily R.</h4>
+          <h4>- Justin Janson</h4>
         </div>
         <div className="testimonial">
           <p>
@@ -86,7 +89,7 @@ function About() {
             courteous, and friendly staff made me feel like family… would
             highly recommend to anyone!"
           </p>
-          <h4>- Michael B.</h4>
+          <h4>- Majida K</h4>
         </div>
       </section>
     </div>
